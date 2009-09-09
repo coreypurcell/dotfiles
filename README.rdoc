@@ -1,4 +1,4 @@
-= Corey Purell Dot Files (Forked from Ryan Bates)
+= Corey Purcell Dot Files (Forked from Ryan Bates)
 
 These are config files to set up a system the way I like it.
 

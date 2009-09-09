@@ -1,5 +1,6 @@
 # cd
 alias ..='cd ..'
+alias cdr='cd ~/Documents/Projects/RailsApps'
 
 # ls
 alias ls="ls -F"

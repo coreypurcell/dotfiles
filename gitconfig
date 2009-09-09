@@ -1,0 +1,14 @@
+[user]
+	name = Corey Purcell
+	email = corey.purcell@gmail.com
+[alias]
+	co = checkout
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[core]
+	excludesfile = /Users/cpurcell/.gitignore
+	editor = mate -w
+[apply]
+	whitespace = nowarn

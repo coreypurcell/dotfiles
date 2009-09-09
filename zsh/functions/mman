@@ -1,0 +1,4 @@
+function mman()
+{
+man "$@" | col -b | mate
+}

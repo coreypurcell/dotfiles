@@ -1,11 +1,11 @@
-= Ryan Bates Dot Files
+= Corey Purell Dot Files (Forked from Ryan Bates)
 
 These are config files to set up a system the way I like it.
 
 
 == Installation
 
-  git clone git://github.com/ryanb/dotfiles ~/.dotfiles
+  git clone git://github.com/coreypurcell/dotfiles ~/.dotfiles
   cd ~/.dotfiles
   rake install
 

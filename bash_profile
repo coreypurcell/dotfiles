@@ -10,3 +10,6 @@ fi
 if [ -f ~/.localrc ]; then
   . ~/.localrc
 fi
+
+
+source /Users/cpurcell/.profile

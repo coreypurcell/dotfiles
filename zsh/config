@@ -10,7 +10,7 @@ fi
 
 export EDITOR='mate -w'
 export PATH="/Users/cpurcell/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:$PATH"
-export PATH="/Library/PostgreSQL/8.4/bin:$PATH"
+export PATH="/Library/PostgreSQL/8.4/bin:$PATH:/Library/Oracle/instantclient/10.2"
 export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
 
 fpath=(~/.zsh/functions $fpath)

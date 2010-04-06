@@ -9,4 +9,4 @@
 source /Users/cpurcell/.profile
 
 
-if [ -s ~/.rvm/scripts/rvm ] ; then source ~/.rvm/scripts/rvm ; fi
+if [[ -s /Users/cpurcell/.rvm/scripts/rvm ]] ; then source /Users/cpurcell/.rvm/scripts/rvm ; fi

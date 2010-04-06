@@ -7,12 +7,19 @@ IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb_history"
 
 IRB.conf[:PROMPT_MODE] = :SIMPLE
 
-%w[rubygems looksee/shortcuts wirble].each do |gem|
+%w[pp rubygems looksee/shortcuts wirble ap].each do |gem|
   begin
     require gem
-  rescue LoadError
+  rescue LoadError => e
+    print e
   end
 end
+
+
+Wirble.init
+Wirble.colorize
+
+IRB.conf[:AUTO_INDENT] = true
 
 class Object
   # list methods which aren't in superclass
@@ -50,5 +57,6 @@ end
 def paste
   `pbpaste`
 end
+
 
 load File.dirname(__FILE__) + '/.railsrc' if $0 == 'irb' && ENV['RAILS_ENV']

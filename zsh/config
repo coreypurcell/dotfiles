@@ -15,6 +15,8 @@ export PATH="/Library/PostgreSQL/8.4/bin:$PATH:/Library/Oracle/instantclient/10.
 
 export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
 
+export PYTHONPATH=/usr/local/lib/python2.6/site-packages
+
 fpath=(~/.zsh/functions $fpath)
 
 autoload -U ~/.zsh/functions/*(:t)

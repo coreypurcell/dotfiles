@@ -1,5 +1,5 @@
 source /Users/cpurcell/.profile
-if [ -s ~/.rvm/scripts/rvm ] ; then source ~/.rvm/scripts/rvm ; fi
+
 
 
 if [[ -n $SSH_CONNECTION ]]; then

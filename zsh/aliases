@@ -31,8 +31,15 @@ alias scaffold='script/generate nifty_scaffold'
 alias migrate='rake db:migrate db:test:clone'
 alias rst='touch tmp/restart.txt'
 
+#rails 3
+alias rs="rails server"
+
+#screen
+alias sr="screen -r"
+
 # commands starting with % for pasting from web
 alias %=' '
 
 #vim
 alias mvim='/Applications/MacVim.app/Contents/MacOS/Vim -g'
+alias vim='mvim -v'

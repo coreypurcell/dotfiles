@@ -33,11 +33,24 @@ set backspace=indent,eol,start
 " File-type highlighting and configuration.
 " Run :filetype (without args) to see what you may have
 " to turn on yourself, or just set them all to be sure.
-syntax on
 filetype on
-filetype plugin on
-filetype indent on
+if has("autocmd")
+  " Enable filetype detection
+  filetype plugin indent on
  
+  " Restore cursor position
+  autocmd BufReadPost *
+    \ if line("'\"") > 1 && line("'\"") <= line("$") |
+    \   exe "normal! g`\"" |
+    \ endif
+endif
+if &t_Co > 2 || has("gui_running")
+  " Enable syntax highlighting
+  syntax on
+endif
+
+au BufNewFile,BufRead *.scss setfiletype css
+
 " Highlight search terms...
 set hlsearch
 set incsearch " ...dynamically as they are typed.

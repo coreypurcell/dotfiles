@@ -8,5 +8,4 @@
 
 source /Users/cpurcell/.profile
 
-
-if [[ -s /Users/cpurcell/.rvm/scripts/rvm ]] ; then source /Users/cpurcell/.rvm/scripts/rvm ; fi
+[[ -s "/Users/cpurcell/.rvm/scripts/rvm" ]] && source "/Users/cpurcell/.rvm/scripts/rvm"  # This loads RVM into a shell session.

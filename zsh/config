@@ -9,6 +9,13 @@ export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
 export PATH="/Users/cpurcell/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:$PATH"
 export PATH="/Library/PostgreSQL/8.4/bin:$PATH:/Library/Oracle/instantclient/10.2"
 
+export ORACLE_HOME=/Library/Oracle/instantclient_10_2
+export LD_LIBRARY_PATH=$ORACLE_HOME
+export DYLD_LIBRARY_PATH=$ORACLE_HOME
+export PATH=$PATH:$ORACLE_HOME
+export SQLPATH=$ORACLE_HOME
+export TNS_ADMIN="/Library/Oracle/network/admin"
+
 fpath=(~/.zsh/functions $fpath)
 
 autoload -U ~/.zsh/functions/*(:t)

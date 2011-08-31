@@ -1,23 +1,12 @@
-source /Users/cpurcell/.profile
-
-
-
 if [[ -n $SSH_CONNECTION ]]; then
   export PS1='%m:%3~$(git_info_for_prompt)%# '
 else
   export PS1='%3~$(git_info_for_prompt)%# '
 fi
 
-export EDITOR='vim'
-
-export PATH="/Users/cpurcell/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:$PATH"
-export PATH="/Library/PostgreSQL/8.4/bin:$PATH:/Library/Oracle/instantclient/10.2"
-
+export EDITOR='mate_wait'
+export PATH="$HOME/bin:$HOME/.bin:/usr/local/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:$PATH"
 export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
-
-export PYTHONPATH=/usr/local/lib/python2.6/site-packages
-
-export ARCHFLAGS="-arch x86_64"
 
 fpath=(~/.zsh/functions $fpath)
 
@@ -55,20 +44,3 @@ bindkey '^[[5C' end-of-line
 bindkey '^[[3~' delete-char
 bindkey '^[^N' newtab
 bindkey '^?' backward-delete-char 
-
-# use incremental search
-bindkey "^R" history-incremental-search-backward
-
-# add some readline keys back
-bindkey "^A" beginning-of-line
-bindkey "^E" end-of-line
-
-# handy keybindings
-bindkey "^P" history-search-backward
-bindkey "^Y" accept-and-hold
-bindkey "^N" insert-last-word
-bindkey -s "^T" "^[Isudo ^[A" # "t" for "toughguy"
-
-#laptop driven development http://oinopa.com/2010/10/24/laptop-driven-development.html
-export HISTIGNORE="fg*"
-bindkey -s '^F' "fg %-\n"

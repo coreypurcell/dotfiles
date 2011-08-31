@@ -49,3 +49,16 @@ bindkey '^?' backward-delete-char
 #laptop driven development http://oinopa.com/2010/10/24/laptop-driven-development.html
 export HISTIGNORE="fg*"
 bindkey -s '^F' "fg %-\n"
+
+# use incremental search
+bindkey "^R" history-incremental-search-backward
+
+# add some readline keys back
+bindkey "^A" beginning-of-line
+bindkey "^E" end-of-line
+
+# handy keybindings
+bindkey "^P" history-search-backward
+bindkey "^Y" accept-and-hold
+bindkey "^N" insert-last-word
+bindkey -s "^T" "^[Isudo ^[A" # "t" for "toughguy"

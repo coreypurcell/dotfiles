@@ -34,6 +34,10 @@ map <leader>v :view %%
 " set winminheight=5
 " set winheight=999
 
+" Highliight Columns over 80
+highlight OverLength ctermbg=darkred ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
+
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h

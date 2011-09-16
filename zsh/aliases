@@ -44,3 +44,4 @@ alias %=' '
 #vim
 alias mvim='/Applications/MacVim.app/Contents/MacOS/Vim -g'
 alias vim='mvim -v'
+alias vi='mvim -v'

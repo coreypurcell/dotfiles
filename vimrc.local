@@ -3,9 +3,9 @@
 " set shell=bash
 
 let &t_Co=256
-:color jellybeans+
+:color solarized
 " if has('gui_running')
-"   set background=light
+set background=light
 " else
 "   set background=dark
 " endif
@@ -19,6 +19,8 @@ map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
 map <leader>gf :CommandTFlush<cr>\|:CommandT %%<cr>
 let g:CommandTCancelMap=['<ESC>','<C-c>']
 
+" Open gist in the browser
+let g:gist_open_browser_after_post = 1
 
 "Edit or view files in same directory as current file
 cnoremap %% <C-R>=expand('%:h').'/'<cr>

@@ -1,6 +1,6 @@
 "
 "set vim to use a shell for RVM
-" set shell=bash
+set shell=bash
 
 let &t_Co=256
 :color solarized

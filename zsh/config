@@ -15,6 +15,7 @@ export DYLD_LIBRARY_PATH=$ORACLE_HOME
 export PATH=$PATH:$ORACLE_HOME
 export SQLPATH=$ORACLE_HOME
 export TNS_ADMIN="/Library/Oracle/network/admin"
+export ARCHFLAGS="-arch x86_64"
 
 fpath=(~/.zsh/functions $fpath)
 

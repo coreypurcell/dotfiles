@@ -245,7 +245,7 @@ map <leader>w :w\|:!script/features --profile wip<cr>
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip  " MacOSX/Linux
 set wildignore+=tmp\*,*.swp,*.zip,*.exe   " Windows
 
-map <c-p> :ClearCtrlPCache<cr>\|:CtrlP<cr>
+map <leader>f :ClearCtrlPCache<cr>\|:CtrlP<cr>
 
 " Sane Ignore For ctrlp
 let g:ctrlp_custom_ignore = {

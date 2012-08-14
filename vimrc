@@ -249,7 +249,7 @@ map <c-p> :ClearCtrlPCache<cr>\|:CtrlP<cr>
 
 " Sane Ignore For ctrlp
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  'vendor$\|\.git$\|\.hg$\|\.svn$\|\.yardoc\|public\/images\|public\/system\|data\|log\|tmp$',
+  \ 'dir':  '\vendor\/ruby|\vendor/cache\|\.git$\|\.hg$\|\.svn$\|\.yardoc\|public\/images\|public\/system\|data\|log\|tmp$',
   \ 'file': '\.exe$\|\.so$\|\.dat$'
   \ }
 

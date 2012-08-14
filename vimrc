@@ -245,8 +245,13 @@ map <leader>w :w\|:!script/features --profile wip<cr>
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip  " MacOSX/Linux
 set wildignore+=tmp\*,*.swp,*.zip,*.exe   " Windows
 
+map <c-p> :ClearCtrlPCache<cr>\|:CtrlP<cr>
+
+" Sane Ignore For ctrlp
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|\.hg$\|\.svn$|ruby',
-  \ 'file': '\.exe$\|\.so$\|\.dll$',
-  \ 'link': 'some_bad_symbolic_links',
+  \ 'dir':  'vendor$\|\.git$\|\.hg$\|\.svn$\|\.yardoc\|public\/images\|public\/system\|data\|log\|tmp$',
+  \ 'file': '\.exe$\|\.so$\|\.dat$'
   \ }
+
+" Set ctrl p command to use Most Recently Used Files
+" let g:ctrlp_cmd = 'CtrlPMixed'

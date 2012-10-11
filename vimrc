@@ -13,7 +13,7 @@ filetype plugin indent on 	"load file type plugins + indentation
 
 let &t_Co=256
 set background=light
-color solarized
+color tomorrow-night
 set nonumber
 set ruler                   "show the cursor position all the time
 set cursorline

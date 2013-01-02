@@ -13,7 +13,7 @@ filetype plugin indent on 	"load file type plugins + indentation
 
 let &t_Co=256
 set background=light
-color solarized
+color tomorrow-night
 set nonumber
 set ruler                   "show the cursor position all the time
 set cursorline
@@ -61,6 +61,15 @@ endif
 
 " provide context when editing
 set scrolloff=3
+" This makes RVM work inside Vim. I have no idea why.
+set shell=bash
+" Prevent Vim from clobbering the scrollback buffer. See
+" http://www.shallowsky.com/linux/noaltscreen.html
+" set t_ti= t_te=
+" Store temporary files in a central spot
+set backup
+set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
 " clear search filter when hitting return
 :nnoremap <CR> :nohlsearch<cr>
@@ -194,7 +203,7 @@ function! RunTests(filename)
     :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
     :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
     if match(a:filename, '\.feature$') != -1
-        exec ":!script/features " . a:filename
+        exec ":!bundle exec cucumber --format progress " . a:filename
     else
         if filereadable("script/test")
             exec ":!script/test " . a:filename
@@ -255,3 +264,27 @@ let g:ctrlp_custom_ignore = {
 
 " Set ctrl p command to use Most Recently Used Files
 " let g:ctrlp_cmd = 'CtrlPMixed'
+"
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Ctags
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" ctrl-F12 will refresh the tags in this project
+map <C-F12> :!ctags -R --exclude=.git --exclude=logs --exclude=doc .<CR>
+
+" when a ruby file is loaded add all ruby and ruby gems tags to the list of tags that are available/relevant
+au BufRead,BufNewFile *.rb setlocal tags+=~/.vim/tags/ruby_and_gems
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Autocomplete
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" SCSS -> CSS for using C-x C-o completion
+autocmd BufNewFile,BufRead *.scss             set ft=scss.css
+autocmd FileType ruby set omnifunc=rubycomplete#Complete
+autocmd FileType ruby let g:rubycomplete_buffer_loading=1
+autocmd FileType ruby let g:rubycomplete_classes_in_global=1
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS

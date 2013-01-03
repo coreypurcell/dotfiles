@@ -57,3 +57,6 @@ alias binit="bi && b package && echo 'vendor/ruby' >> .gitignore"
 
 #tmux
 alias tmux="TERM=screen-256color-bce tmux"
+
+# syntax highlighter for keynote
+alias syntax="pbpaste | highlight --syntax=rb -O rtf | pbcopy"
